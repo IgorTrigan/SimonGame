@@ -7,7 +7,7 @@ $(document).on("touchstart keydown", function () {
 
 
 function startGame(level) {
-  $(document).off("keydown");
+  $(document).off("keydown touchstart");
   $("h1").text("level " + level);
   createGamePattern(level);
   setTimeout(function () {
@@ -86,7 +86,7 @@ function checkCurrentClick(gamePattern, userClickPattern) {
       $("body").removeClass("game-over");
     }, 200);
 
-    $(document).on("keydown", (e) => {
+    $(document).on("keydown touchstart", (e) => {
       level = 1;
       startGame(1);
     });
