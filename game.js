@@ -1,9 +1,10 @@
 let level = 1;
 let buttonColors = ["green", "yellow", "red", "blue"];
 let gamePattern = [];
-$(document).on("keydown", function () {
+$(document).on("touchstart keydown", function () {
   startGame(level);
 });
+
 
 function startGame(level) {
   $(document).off("keydown");
